@@ -3,45 +3,53 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
+        <title>Товары - Мой личный сайт</title>
         <link rel="stylesheet" href="../style/styles.css">
     </head>
     <body>
-        <header>
-            <div>
-                Мой личный сайт
-            </div>
-        </header>
-        <div id="menu">
-            <ul>
-                <li><a href="../pages/index.html">Главная</a></li>
-                <li><a href="../pages/news.html">Новости</a></li>
-                <li><a href="../pages/practices.html">Практики</a></li>
-                <li><a href="../pages/goods.html">Товары</a></li>
-                <li><a href="../pages/contacts.html">Контакты</a></li>
-            </ul>
+        <div class="page-container">
+            <header>
+                <h1>Мой личный сайт</h1>
+            </header>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../pages/index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/practices.html">Практики</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/goods.html">Товары</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <main class="content">
+                <h2 class="profile-title">Товары</h2>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <h3 class="product-name">Книга "Сияние" - Стивен Кинг</h3>
+                        <img src="../images/Shining.webp" alt="Сияние" class="product-image" width="200" height="300">
+                        <p class="product-price">2 454 657.00 $</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <h3 class="product-name">Книга "Дракула" - Брэм Стокер</h3>
+                        <img src="../images/darc.webp" alt="Дракула" class="product-image" width="200" height="250">
+                        <p class="product-price">58 522.00 $</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <h3 class="product-name">Книга "Призрак оперы" - Гастон Леру</h3>
+                        <img src="../images/gost.webp" alt="Призрак оперы" class="product-image" width="200" height="250">
+                        <p class="product-price">42 747.00 $</p>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <p>Не звонить без острой необходимости.</p>
+                <p>Номер телефона: +7 (935) 232-32-13</p>
+            </footer>
         </div>
-        <div id="goods">
-        <p>Товары</p>
-            <div>
-                <h3>Книга "Сияние" - Стивен Кинг</h3>
-                <img src="../images/Shining.webp" alt="Сияние" width="200" height="300">
-                <p>Цена: 2454657.00 $</p>
-            </div>
-            <div>
-                <h3>Книга "Дракула" - Брэм Стокер</h3>
-                <img src="../images/darc.webp" alt="Дракула" width="200" height="250">
-                <p>Цена: 58522.00 $ </p>
-            </div>
-            <div>
-                <h3>>Книга "Призрак оперы" - Гастон Леру</h3>
-                <img src="../images/gost.webp" alt="Призрак оперы" width="200" height="250">
-                <p>Цена: 42747.00 $</p>
-            </div>
-        </div>
-        <div id="footer">Не звонить без острой необходимости.</div>
-        <footer>
-            <p>Номер телефона: +7 (935) 232-32-13</p>
-        </footer>
     </body>
 </html>

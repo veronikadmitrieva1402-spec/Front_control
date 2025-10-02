@@ -3,64 +3,68 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Практические работы</title>
+        <title>Практические работы - Мой личный сайт</title>
         <link rel="stylesheet" href="../style/styles.css">
     </head>
     <body>
-        <header>
-            <div>
-                Мой личный сайт
-            </div>
-        </header>
-        <div id="menu">
-            <ul>
-                <li><a href="../pages/index.html">Главная</a></li>
-                <li><a href="../pages/news.html">Новости</a></li>
-                <li><a href="../pages/practices.html">Практики</a></li>
-                <li><a href="../pages/goods.html">Товары</a></li>
-                <li><a href="../pages/contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-        
-        <div id="practices">
-            <p>Практические работы</p>
-            <div class="practice-item">
-                <h3>Практика 1: Математика (Ряды)</h3>
-                <div class="practice-content">
-                    <div class="practice-info">
-                        <p><strong>Тема:</strong> Исследование сходимости числовых рядов</p>
-                        <p><strong>Срок сдачи:</strong> 15.12.2024</p>
-                        <p><strong>Статус:</strong> Выполнено</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="practice-item">
-                <h3>Практика 2: ТИП (JavaScript)</h3>
-                <div class="practice-content">
-                    <div class="practice-info">
-                        <p><strong>Тема:</strong> Разработка веб-приложения на JavaScript</p>
-                        <p><strong>Срок сдачи:</strong> 20.12.2024</p>
-                        <p><strong>Статус:</strong> В процессе</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="practice-item">
-                <h3>Практика 3: Психология (Тип личности)</h3>
-                <div class="practice-content">
-                    <div class="practice-info">
-                        <p><strong>Тема:</strong> Определение психологического типа личности</p>
-                        <p><strong>Срок сдачи:</strong> 25.12.2024</p>
-                        <p><strong>Статус:</strong> Не начато</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="page-container">
+            <header>
+                <h1>Мой личный сайт</h1>
+            </header>
 
-        <footer>
-            <p>Не звонить без острой необходимости.</p>
-            Номер телефона: +7 (935) 232-32-13
-        </footer>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../pages/index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/practices.html">Практики</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/goods.html">Товары</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        
+            <main class="content">
+                <h2 class="profile-title">Практические работы</h2>
+
+                <div class="practices-grid">
+                    <article class="practice-card">
+                        <h3 class="practice-name">Практика 1: Математика (Ряды)</h3>
+                        <div class="practice-content">
+                            <div class="practice-info">
+                                <p><strong>Тема:</strong> Исследование сходимости числовых рядов</p>
+                                <p><strong>Срок сдачи:</strong> 15.12.2024</p>
+                                <p class="status-completed"><strong>Статус:</strong> Выполнено</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="practice-card">
+                        <h3 class="practice-name">Практика 2: ТИП (JavaScript)</h3>
+                        <div class="practice-content">
+                            <div class="practice-info">
+                                <p><strong>Тема:</strong> Разработка веб-приложения на JavaScript</p>
+                                <p><strong>Срок сдачи:</strong> 20.12.2024</p>
+                                <p class="status-in-progress"><strong>Статус:</strong> В процессе</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="practice-card">
+                        <h3 class="practice-name">Практика 3: Психология (Тип личности)</h3>
+                        <div class="practice-content">
+                            <div class="practice-info">
+                                <p><strong>Тема:</strong> Определение психологического типа личности</p>
+                                <p><strong>Срок сдачи:</strong> 25.12.2024</p>
+                                <p class="status-not-started"><strong>Статус:</strong> Не начато</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <p>Не звонить без острой необходимости.</p>
+                <p>Номер телефона: +7 (935) 232-32-13</p>
+            </footer>
+        </div>
     </body>
 </html>

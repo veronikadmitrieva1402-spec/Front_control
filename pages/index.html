@@ -7,56 +7,67 @@
         <link rel="stylesheet" href="../style/styles.css">
     </head>
     <body>
-        <header>
-            <div>
-                Мой личный сайт
-            </div>
-        </header>
-        <div id="menu">
-            <ul>
-                <li><a href="../pages/index.html">Главная</a></li>
-                <li><a href="../pages/news.html">Новости</a></li>
-                <li><a href="../pages/practices.html">Практики</a></li>
-                <li><a href="../pages/goods.html">Товары</a></li>
-                <li><a href="../pages/contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-        <div id="content">
-            <p>Информация об авторе</p>
-            <img src="../images/myphoto.webp" alt="My photo" width="200" height="200">
-            <p>Дмитриева Вероника Романовна</p>
-            <p>ЭФБО-04-24</p>
-            <p>Я родилась в городе Омске в 2007 году, в тот день шел снег. Сибирь - место, где холодно и грустно. Время незамедлительно шло, зима сменяла лето, а я переходила из одного класса в другой - 8, 9...Наступила пора, когда снег закончился, и я покинула город Омск.</p>
-            <div class="skills-section">
-                <div class="skills-title">Навыки:</div>
-                <div class="skills-container">
-                    <div class="skill">Рисую</div>
-                    <div class="skill">Танцую</div>
-                    <div class="skill">Читаю</div>
-                    <div class="skill">Сплю</div>
-                </div>
-            </div>
+        <div class="page-container">
+            <header class="header">
+                <h1>Мой личный сайт</h1>
+            </header>
 
-            <div class="experience">
-                <div class="experience-title">Мой жизненный опыт:</div>
-                <div class="experience-item">
-                    <span class="exp-number">Опыт 1</span><br>
-                    Бесконечные воспитательные лагеря в Тайге. Закаляли.
-                </div>
-                <div class="experience-item">
-                    <span class="exp-number">Опыт 2</span><br>
-                    Рисунки карандашом в старом здании художественной школы. Попытка стать художником.
-                </div>
-                <div class="experience-item">
-                    <span class="exp-number">Опыт 3</span><br>
-                    Школьные будни с тоскливыми уроками и насыщенными переменами. Встреча с хорошими людьми.
-                </div>
-            </div>
-        </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../pages/index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/practices.html">Практики</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/goods.html">Товары</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
 
-        <footer>
-            <p>Не звонить без острой необходимости.</p>
-            Номер телефона: +7 (935) 232-32-13
-        </footer>
+            <main class="content">
+                <article class="profile-header">
+                    <h1 class="profile-title">Информация об авторе</h1>
+                    <img class="profile-photo" src="../images/myphoto.webp" alt="My photo" width="200" height="200">
+                    <h2 class="profile-name">Дмитриева Вероника Романовна</h2>
+                    <p class="profile-group">ЭФБО-04-24</p>
+                </article>
+
+                <section class="about-me">
+                    <h2>Обо мне</h2>
+                    <p>Я родилась в городе Омске в 2007 году, в тот день шел снег. Сибирь - место, где холодно и грустно. Время незамедлительно шло, зима сменяла лето, а я переходила из одного класса в другой - 8, 9...Наступила пора, когда снег закончился, и я покинула город Омск.</p>
+                </section>
+
+                <section class="skills-section">
+                    <div class="skills-title">Навыки:</div>
+                    <div class="skills-container">
+                        <div class="skill">Рисую</div>
+                        <div class="skill">Танцую</div>
+                        <div class="skill">Читаю</div>
+                        <div class="skill">Сплю</div>
+                    </div>
+                </section>
+
+                <section class="experience">
+                    <h2 class="experience-title">Мой жизненный опыт:</h2>
+                    <div class="experience-grid">
+                        <article class="experience-item">
+                            <span class="exp-number">Опыт 1</span><br>
+                            <p class="experience-desc">Воспитательные лагеря в Тайге. Закаляли.</p>
+                        </article>
+                        <article class="experience-item">
+                            <span class="exp-number">Опыт 2</span><br>
+                            <p class="experience-desc">Рисунки карандашом в старом здании художественной школы. Попытка стать художником.</p>
+                        </article>
+                        <article class="experience-item">
+                            <span class="exp-number">Опыт 3</span><br>
+                            <p class="experience-desc">Школьные будни с тоскливыми уроками и насыщенными переменами. Встреча с хорошими людьми.</p>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>Не звонить без острой необходимости.</p>
+                Номер телефона: +7 (935) 232-32-13
+            </footer>
+        </div>
     </body>
 </html>

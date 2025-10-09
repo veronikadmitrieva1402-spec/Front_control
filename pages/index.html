@@ -10,6 +10,17 @@
         <div class="page-container">
             <header class="header">
                 <h1>Мой личный сайт</h1>
+                <div class="theme-switcher">
+                    <input type="checkbox" class="theme-toggle" id="theme-toggle">
+                    <label for="theme-toggle" class="theme-label">
+                        <span>
+                            <img class="theme-icon" src="../images/sun.webp" alt="Sun" width="50" height="50">
+                        </span>
+                        <span>
+                            <img class="theme-icon" src="../images/moon.webp" alt="Moon" width="50" height="50">
+                        </span>
+                    </label>
+                </div>
             </header>
 
             <nav class="nav">
@@ -36,12 +47,13 @@
                 </section>
 
                 <section class="skills-section">
-                    <div class="skills-title">Навыки:</div>
+                    
                     <div class="skills-container">
-                        <div class="skill">Рисую</div>
-                        <div class="skill">Танцую</div>
-                        <div class="skill">Читаю</div>
-                        <div class="skill">Сплю</div>
+                        <div class="skills-title">Навыки:</div>
+                        <div class="skills">Рисую</div>
+                        <div class="skills">Танцую</div>
+                        <div class="skills">Читаю</div>
+                        <div class="skills">Сплю</div>
                     </div>
                 </section>
 
@@ -65,9 +77,74 @@
             </main>
 
             <footer class="footer">
-                <p>Не звонить без острой необходимости.</p>
+                <p >Не звонить без острой необходимости.</p>
                 Номер телефона: +7 (935) 232-32-13
             </footer>
         </div>
+        <script>
+            class ThemeSwitcher {
+                constructor(){
+                    this.themeToggle = document.getElementById('theme-toggle');
+                    this.themeBtn = document.getElementById('themeBtn');
+                    this.currentTheme = localStorage.getItem('theme') || 'light';
+                
+                    this.init();
+                }
+                
+                init() { 
+  
+                    this.setTheme(this.currentTheme);
+        
+       
+                    if (this.themeToggle) {
+                        this.themeToggle.checked = this.currentTheme === 'dark';
+                        this.themeToggle.addEventListener('change', (e) => {
+                            this.toggleTheme();
+                        });
+                    } 
+        
+                    if (this.themeBtn) {
+                        this.themeBtn.addEventListener('click', () => {
+                            this.toggleTheme();
+                        });
+                    }
+    
+                    this.watchSystemPreference();
+                }
+    
+                toggleTheme() {
+                    this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+                    this.setTheme(this.currentTheme);
+                }
+                
+                setTheme(theme) {
+                    document.documentElement.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                    
+                    if (this.themeBtn) {
+                        this.themeBtn.innerHTML = theme === 'light' ? '🌙' : '☀️';
+                    }
+                    
+                    if (this.themeToggle) {
+                        this.themeToggle.checked = theme === 'dark';
+                    }
+                }
+                
+                watchSystemPreference() {
+                    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                    
+                    mediaQuery.addEventListener('change', (e) => {
+                        if (!localStorage.getItem('theme')) {
+                            this.setTheme(e.matches ? 'dark' : 'light');
+                        }
+                    });
+                }
+            }
+
+
+            document.addEventListener('DOMContentLoaded', () => {
+                new ThemeSwitcher();
+            });
+        </script>
     </body>
 </html>
